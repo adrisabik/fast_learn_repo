@@ -18,6 +18,7 @@ class HomeCubit extends Cubit<HomeState> {
       final responsePopular = await _repository.getPopularMovies();
       final responseTopRated = await _repository.getTopRatedMovies();
 
+      // Note : jangan lupa dikasih `,` di parameter terakhirnya
       emit(HomeState.success(
           responseNowPlaying, responsePopular, responseTopRated));
     } catch (e) {
