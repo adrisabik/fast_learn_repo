@@ -11,6 +11,7 @@ const Color kMikadoYellow = Color(0xFFffc300);
 const Color kDavysGrey = Color(0xFF4B5358);
 const Color kGrey = Color(0xFF303030);
 
+// Note : yang parameternya lebih dari 1, nanti bisa dikasih `,` parameter paling akhirnya. Biar auto format
 // text style
 final TextStyle kHeading5 =
     GoogleFonts.poppins(fontSize: 23, fontWeight: FontWeight.w400);
