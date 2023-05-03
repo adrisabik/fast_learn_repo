@@ -8,6 +8,7 @@ import 'package:fast_learn_repo/features/home/repository/response/movie_response
 
 class HomeMoviePage extends StatefulWidget {
   static const ROUTE_NAME = '/home';
+  // Note: ini dipakai atau engga ya?
 
   @override
   _HomeMoviePageState createState() => _HomeMoviePageState();
@@ -22,8 +23,10 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
 
   @override
   Widget build(BuildContext context) {
+   // contoh declare => Widget _buildSubHeading = Row( ......
+  
     return Scaffold(
-      drawer: Drawer(
+      drawer: Drawer( // Note: Drawer ini untuk apa ya?
         child: Column(
           children: [
             const UserAccountsDrawerHeader(
@@ -138,6 +141,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
     );
   }
 
+  // Note : Mungkin bisa ditaruh di dalam `build`.  Jadi kalau dia butuh parameter context langsung ambil aja. Contoh ada diatas
   Row _buildSubHeading({required String title, Function()? onTap}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,6 +164,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
   }
 }
 
+// Note: Kalau decleare stateless or statefull sebaiknya satu file tidak lebih dari 1. Biar gk bingung. Jadi bisa di pisah. Mungkin jadi file dengan name `movie_list_section.dart`
 class MovieList extends StatelessWidget {
   final List<MovieResponse>? movies;
 
