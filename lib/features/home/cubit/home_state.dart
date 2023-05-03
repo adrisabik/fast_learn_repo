@@ -34,6 +34,7 @@ class HomeState extends Equatable {
     );
   }
 
+  // Note : Jangan lupa kasih `,` di parameter terkahirnya
   factory HomeState.success(List<MovieResponse> responseNowPlaying,
       responsePopular, responseTopRated) {
     return HomeState(
@@ -50,6 +51,7 @@ class HomeState extends Equatable {
     );
   }
 
+  // Note : Jangan lupa kasih `,` di parameter terkahirnya
   @override
   List<Object?> get props =>
       [status, responseNowPlaying, responsePopular, responseTopRated];

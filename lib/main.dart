@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  // Untuk yang MultiBlocProvider itu bisa dibuat file sendiri. Jadi nanti di `providers` nya tinggal manggil file yg udah kita declare. Untuk improvment kedepan aja
     return MultiBlocProvider(
       providers: [
         BlocProvider(
